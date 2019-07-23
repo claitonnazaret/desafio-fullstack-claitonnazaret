@@ -1,0 +1,5 @@
+const MASK_CPF = '111.111.111-11';
+const MASK_TELEFONE = '(11) 11111-1111';
+const MASK_CEP = '11111-111';
+
+export { MASK_CPF, MASK_TELEFONE, MASK_CEP };

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="1" author="claiton.nazaret">
+        <preConditions onFail="MARK_RAN" onFailMessage="Tabela usuario já existe">
+            <not>
+                <tableExists tableName="usuario"/>
+            </not>
+        </preConditions>
+        <comment>Criando a tabela usuario</comment>
+        <createTable tableName="usuario">
+            <column name="id" autoIncrement="true" type="bigint">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_usuario"/>
+            </column>
+            <column name="nome_completo" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="cpf" type="varchar(15)">
+                <constraints nullable="false" />
+            </column>
+            <column name="nome_mae" type="varchar(255)"/>
+            <column name="nome_pai" type="varchar(255)"/>
+            <column name="telefone" type="varchar(15)"/>
+            <column name="cep" type="varchar(9)"/>
+            <column name="logradouro" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="numero" type="char(10)"/>
+            <column name="complemento" type="varchar(255)"/>
+            <column name="bairro" type="varchar(255)"/>
+            <column name="localidade" type="varchar(255)"/>
+            <column name="uf" type="char(2)"/>
+            <column name="ibge" type="varchar(10)"/>
+
+            <column name="data_criacao" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP" />
+            <column name="data_atualizacao" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP" />
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

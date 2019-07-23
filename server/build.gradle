@@ -1,0 +1,37 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.6.RELEASE'
+    id 'java'
+    id 'idea'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'br.com'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-data-rest'
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+    
+    compile group: 'cz.jirutka.rsql', name: 'rsql-parser', version: '2.1.0'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+
+    compile 'org.liquibase:liquibase-core'
+
+    compileOnly 'org.projectlombok:lombok'
+    runtimeOnly 'com.h2database:h2'
+
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
