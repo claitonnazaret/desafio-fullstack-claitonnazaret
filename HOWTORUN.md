@@ -11,7 +11,7 @@
   - Certifique-se que possua o JDK java v.1.8.0 https://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html)
   - Após instalar o jdk adicione as variáveis de ambiente o JAVA_HOME conforme imagem abaixo ![alt text](JAVA_HOME.png)
   - Edit a variável path adicionando %JAVA_HOME%\bin conforme imagem abaixo ![](path.png)
-  - Na pasta server o comando `./gradlew clean bootRun` 
+  - #### Na pasta server execute o comando `./gradlew clean bootRun` 
  
  - ##Frontend Tecnologias 
    * React App (Typescript)
