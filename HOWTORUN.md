@@ -28,7 +28,7 @@
  * Crud Usuário (Listar, Salvar, Editar e Excluir)
  * Backend Java Rest (Pensei em fazer em PHP Slim Framework 3 
  mas faz algum tempo que não trabalho com Slim e demandaria mais tempo pra configurar o projeto)
- * O projeto foi dividido entre planejamento e execução das tecnologias, estruturação de bases fron e back
+ * O projeto foi dividido entre planejamento e execução das tecnologias, estruturação de bases frontend e backend
  * Validação de nome obrigatório
  * Utilizei um banco H2 in memory pois facilita na execução do teste (há um insert de dados primários somente 
  pra facilitar a primeira visualização, podendo excluir todos os dados e incluir novamente)
